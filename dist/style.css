@@ -1,0 +1,49 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+h1, h2 {
+  margin: 0;
+  padding: 0;
+  text-shadow: black 0 2px 32px;
+}
+h1 {
+  font-size: 7em;
+}
+h2 {
+  font-size: 3em;
+}
+.container {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+}
+.container .clock {
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-75%);
+}
+.popup {
+  width: 300px;
+  padding: 20px;
+  color: black;
+  text-align: center;
+}
+.popup .labels, .popup .inputs {
+  width: 100px;
+  float: left;
+  padding: 10px;
+}
+.popup .labels {
+  text-align: right;
+}
+.popup .inputs {
+  text-align: left;
+}
+.popup button {
+  margin-top: 80px;
+}
