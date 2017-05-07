@@ -39,13 +39,28 @@ function syncBackground() {
 }
 
 function changeBackground(bg) {
-  document.getElementsByClassName('container')[0].style.backgroundImage = 'url("' + bg.urls.regular + '")';
+  // Load the low quality image
+  setBackground(bg.urls.small);
+
+  // Load the medium resolution image
+  const mediumImage = new Image();
+  mediumImage.src = bg.urls.regular;
+  mediumImage.onload = () => setBackground(bg.urls.regular);
+
+  // Load the full resolution image
+  const fullImage = new Image();
+  fullImage.src = bg.urls.full;
+  fullImage.onload = () => setBackground(bg.urls.full);
+}
+
+function setBackground(bgUrl) {
+console.log('setBackground', bgUrl);
+  document.getElementsByClassName('container')[0].style.backgroundImage = 'url("' + bgUrl + '")';
 }
 
 function loadNewBackground() {
   return backgrounds[getRandomInt()];
 }
-loadNewBackground();
 
 function getRandomInt() {
   const min = 0;
