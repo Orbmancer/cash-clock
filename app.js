@@ -8,8 +8,16 @@ function syncCashDays() {
 
     if (cashLeft && cashMonthly) {
       const cashDaysLeft = getCashDaysLeft(cashLeft, cashMonthly, cashLeftDate);
-      document.getElementsByClassName('timeLeft')[0].innerHTML = cashDaysLeft + ' days';
-      document.title = 'Cash Clock:' +  cashDaysLeft + ' days left';
+
+      if (cashDaysLeft > 0) {
+        document.getElementsByClassName('timeLeft')[0].innerHTML = cashDaysLeft + ' days';
+        document.title = 'Cash Clock:' +  cashDaysLeft + ' days left';
+      } else {
+        document.getElementsByClassName('timeLeft')[0].innerHTML = 'You died :(';
+        document.getElementsByClassName('timeLeft')[0].style.color = 'red';
+        document.getElementsByClassName('timeLeftSubtitle')[0].innerHTML = 'Find some cash or switch project !<br/><span style="color: lime">You\'ll do better next time :)</span>';
+        document.title = 'Cash Clock: you died :(';
+      }
     } else {
       document.getElementsByClassName('timeLeft')[0].innerHTML = '??? days';
       document.getElementsByClassName('timeLeftSubtitle')[0].innerHTML = 'please fill the parameters in the extension popup';
