@@ -1,6 +1,4 @@
-import unsplashBgs from './backgrounds.json';
-
-const backgrounds = unsplashBgs.results;
+import backgrounds from './backgrounds.json';
 
 function syncCashDays() {
   getOptions((options) => {
@@ -54,7 +52,6 @@ function changeBackground(bg) {
 }
 
 function setBackground(bgUrl) {
-console.log('setBackground', bgUrl);
   document.getElementsByClassName('container')[0].style.backgroundImage = 'url("' + bgUrl + '")';
 }
 
@@ -87,10 +84,7 @@ function getTodayDateFormatted() {
 }
 
 function getDaysBetweenDates(date1, date2) {
-  console.log(date1, date2);
-  var c = Math.abs(Math.round((date1 - date2)/86400000));
-  console.log('days', c);
-  return c;
+  return Math.abs(Math.round((date1 - date2)/86400000));
 }
 
 function getCashDaysLeft(cashLeft, cashMonthly, cashLeftDate) {

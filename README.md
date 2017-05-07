@@ -7,7 +7,8 @@ This adventure is limited by the amount of cash you have right now. Therefore yo
 Track this time left using this Chrome extension :rocket:
 
 The images change every hour. **Never get bored.**
-The images are loaded using 3 levels of detail to have a smooth and beautiful experience:
+
+They are loaded using 3 levels of detail to have a smooth and beautiful experience:
 
 - a fast but low quality image
 - a medium quality image
@@ -15,10 +16,13 @@ The images are loaded using 3 levels of detail to have a smooth and beautiful ex
 
 ## Contributing
 
-The images come from [Unsplash](https://unsplash.com). They are generated using their api, then stored in `backgrounds.json` with a curl command:
+The images come from [Unsplash](https://unsplash.com). They are generated using their api, then stored in `backgrounds.json` with a node (version >= 7) script:
 ```bash
-curl "https://api.unsplash.com/search/photos?query=landscape" --header "Authorization: Bearer YOUR_ACCESS_TOKEN" > backgrounds.json
+export ACCESS_TOKEN=YOUR_ACCESS_TOKEN
+node generate_backgrounds.js
 ```
+
+[See the unsplash api to generate your own access_token](https://unsplash.com/documentation#user-authentication)
 
 Propose a pull request if you offer a better image pack :wink:
 
