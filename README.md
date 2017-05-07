@@ -6,6 +6,8 @@ This adventure is limited by the amount of cash you have right now. Therefore yo
 
 Track this time left using this Chrome extension :rocket:
 
+Install it now: https://chrome.google.com/webstore/detail/cash-clock/kfdiindhinmfgpchkhodaibecjmbcbfp
+
 The images change every hour. **Never get bored.**
 
 They are loaded using 3 levels of detail to have a smooth and beautiful experience:

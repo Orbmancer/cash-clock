@@ -44,7 +44,7 @@ const storePhotosAtPage = (page, writeToConsole = false) => {
   });
 }
 
-const lastPage = 10;
+const lastPage = 50;
 for (let i=1; i<=lastPage; i++) {
   storePhotosAtPage(i, i == lastPage);
 }
