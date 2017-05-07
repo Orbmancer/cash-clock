@@ -44,6 +44,15 @@ h2 {
 .popup .inputs {
   text-align: left;
 }
-.popup button {
+.popup .actions {
   margin-top: 80px;
+}
+.popup .credits {
+  margin-top: 40px;
+}
+.popup a:link, .popup a:visited {
+ color: #55acee;
+}
+.popup a:hover, .popup a:active {
+  color: #8899a6;
 }
